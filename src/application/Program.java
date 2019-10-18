@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
+import uitl.ProductPredicate;
 
 public class Program {
 
@@ -17,7 +18,8 @@ public class Program {
 		
 		showProduct(list);
 		//Remover todos os produtos com preco superior a 100.00
-		list.removeIf(p->p.getPrice() >= 100.0);
+		//list.removeIf(p->p.getPrice() >= 100.0);
+		list.removeIf(new ProductPredicate());
 		showProduct(list);
 	}
 	public static void showProduct(List<Product> list) {
