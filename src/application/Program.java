@@ -19,7 +19,8 @@ public class Program {
 		//Remover todos os produtos com preco superior a 100.00
 		//list.removeIf(p->p.getPrice() >= 100.0);
 		//list.removeIf(new ProductPredicate());
-		list.removeIf(Product::staticProductPredicate);
+		//list.removeIf(Product::staticProductPredicate);
+		list.removeIf(Product::nonStaticProductPredicate);
 		showProduct(list);
 	}
 	public static void showProduct(List<Product> list) {
