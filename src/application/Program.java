@@ -23,8 +23,8 @@ public class Program {
 		//list.removeIf(Product::staticProductPredicate);
 		//list.removeIf(Product::nonStaticProductPredicate);
 		double min = 100.0;
-		Predicate<Product> pred = p -> p.getPrice() >= min;
-		list.removeIf(pred);
+		//Predicate<Product> pred = p -> p.getPrice() >= min;
+		list.removeIf(p -> p.getPrice() >= min);
 		showProduct(list);
 	}
 	public static void showProduct(List<Product> list) {
